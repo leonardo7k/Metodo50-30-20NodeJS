@@ -6,6 +6,8 @@ var leitor = readline.createInterface({
     output: process.stdout
 });
 
+console.log("");
+
 leitor.question("Qual o valor total que você deseja análisar?\n", function(answer) {
     var resp = answer;
     leitor.close();
@@ -18,11 +20,14 @@ leitor.question("Qual o valor total que você deseja análisar?\n", function(ans
     const cotasMXRF11 = valorInvestimentos / 9.70;
     
     
+    console.log("");
+    console.log("=========================================================");
     console.log("Valor total: R$" + valorTotal);
-    console.log("Despesas essenciais: R$" + valorEssencial);
-    console.log("Desejos: R$" + valorDesejos);
-    console.log("Investimentos: R$" + valorInvestimentos);
+    console.log("Despesas essenciais: R$" + valorEssencial.toFixed(2));
+    console.log("Desejos: R$" + valorDesejos.toFixed(2));
+    console.log("Investimentos: R$" + valorInvestimentos.toFixed(2));
     console.log("Total de " + Math.trunc(cotasMXRF11) + " cotas de MXRF11 que renderiam R$" + (Math.trunc(cotasMXRF11) * 0.11) + " ao mês.");
+    console.log("=========================================================");
 });
 
 
